@@ -1,20 +1,54 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    content: [
+        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    theme: {
+        screens: {
+            sm: "640px",
+            // => @media (min-width: 640px) { ... }
+
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
+
+            lg: "1024px",
+            // => @media (min-width: 1024px) { ... }
+
+            xl: "1280px",
+            // => @media (min-width: 1280px) { ... }
+
+            "2xl": "1536px",
+            // => @media (min-width: 1536px) { ... }
+        },
+        extend: {
+            animation: {
+                "loop-scroll": "loop-scroll 35s linear infinite",
+            },
+            keyframes: {
+                "loop-scroll": {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(-90%)" },
+                },
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [
+        function ({ addUtilities }) {
+            const newUtitlities = {
+                ".no-scrollbar::-webkit-scrollbar": {
+                    display: "none",
+                },
+                ".no-scrollbar": {
+                    "-ms-overflow-style": "none",
+                    "scrollbar-width": "none",
+                },
+            };
+            addUtilities(newUtitlities);
+        },
+    ],
 };
 export default config;
