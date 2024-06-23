@@ -8,7 +8,7 @@ import Footer from "./layout/Footer";
 
 const ContactUs = () => {
     return (
-        <main>
+        <section>
             <div className=" bg-white rounded-[16px] h-full w-full  flex flex-col">
                 <div className="flex justify-center">
                     <iframe
@@ -139,7 +139,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
     );
 };
 

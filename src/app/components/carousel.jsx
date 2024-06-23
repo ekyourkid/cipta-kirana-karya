@@ -32,7 +32,7 @@ const CaraouselCard = () => {
         },
     ];
     return (
-        <main className="">
+        <section className="">
             <div className=" overflow-x-scroll no-scrollbar space-x-10 flex h-96  ">
                 {LISTCARD.map((item, index) => {
                     return (
@@ -52,7 +52,7 @@ const CaraouselCard = () => {
                 })}
                 ;
             </div>
-        </main>
+        </section>
     );
 };
 

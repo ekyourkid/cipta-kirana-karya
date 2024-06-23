@@ -55,8 +55,8 @@ const Comitment = () => {
         },
     ];
     return (
-        <main className="w-full h-11/12">
-            <section className="">
+        <section className="w-full h-11/12">
+            <div className="">
                 <div className="p-10 2xl:py-14">
                     <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-semibold">
                         Our Comitment
@@ -86,8 +86,8 @@ const Comitment = () => {
                         ))}
                     </div>
                 </div>
-            </section>
-            <section className="flex items-center justify-center py-10 sm:py-16 lg:py-20 ">
+            </div>
+            <div className="flex items-center justify-center py-10 sm:py-16 lg:py-20 ">
                 <div>
                     <div className="">
                         <h1 className="flex justify-center py-10 text-3xl font-semibold lg:text-4xl 2xl:text-5xl">
@@ -129,8 +129,8 @@ const Comitment = () => {
                         />
                     </svg>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
     );
 };
 

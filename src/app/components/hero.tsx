@@ -20,7 +20,7 @@ const HeroSection = () => {
     }, []);
 
     return (
-        <main
+        <div
             style={{
                 backgroundImage: `url('/images/heroBg.jpeg')`,
                 backgroundRepeat: "no-repeat",
@@ -59,7 +59,7 @@ const HeroSection = () => {
                     </button>
                 </div>
             </section>
-        </main>
+        </div>
     );
 };
 export default HeroSection;

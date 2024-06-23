@@ -5,16 +5,19 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaRegCopyright } from "react-icons/fa6";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
     return (
         <main className="bg-[#3988D1] h-[700px]">
             <div className="p-8 space-y-5">
                 <section className="flex items-center space-x-3">
-                    <img
-                        src="./images/c4.png"
+                    <Image
+                        src={"/images/logo.png"}
                         alt=""
-                        className="w-14 bg-[#F77E53] rounded-xl"
+                        width={100}
+                        height={100}
+                        className="w-16 rounded-xl"
                     />
                     <h1 className="text-2xl font-bold text-white">
                         Cipta Kirana Karya
