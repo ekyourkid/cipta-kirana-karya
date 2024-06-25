@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const AboutPage = () => {
     return (
-        <main className="w-9/12 flex mx-auto my-20">
+        <main className="w-9/12 flex mx-auto py-60">
             <section className="w-8/12 ">
                 <div className="w-10/12 space-y-9 flex flex-col pt-7">
                     <h1 className="text-5xl font-bold">Cipta Karya Kirana</h1>

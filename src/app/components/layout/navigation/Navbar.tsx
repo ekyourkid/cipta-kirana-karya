@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LuMenu } from "react-icons/lu";
+import { IoCallOutline } from "react-icons/io5";
 
 const Navbar = () => {
     const checkoutTextGenerator = React.useMemo(() => {
@@ -20,9 +20,12 @@ const Navbar = () => {
         );
     }, []);
     return (
-        <main className="bg-transparent bg-white">
-            <nav className=" w-[92%] flex justify-between items-center mx-auto">
-                <Link href={"/main/home"}>
+        <main className="w-full bg-[#3988D1] absolute px-20 py-2 ">
+            <nav className="flex justify-between items-center ">
+                <Link
+                    className="flex items-center justify-center "
+                    href={"/main/home"}
+                >
                     <Image
                         src={"/images/logo.png"}
                         width={80}
@@ -30,12 +33,20 @@ const Navbar = () => {
                         alt=""
                         className="w-20"
                     />
+                    <div className="text-white mt-2 -space-y-2">
+                        <h1 className="uppercase text-xl">
+                            cipta kirana karya
+                        </h1>
+                        <h2 className="text-lg font-extralight">
+                            indonesian asphalt
+                        </h2>
+                    </div>
                 </Link>
                 <div className="">
                     <ul className="flex items-center gap-[4vw]">
                         <li>
                             <Link
-                                className="hover:text-gray-500 text-xl"
+                                className="hover:text-white text-xl duration-500 ease-in-out hover:text-2xl"
                                 href={"/main/home"}
                             >
                                 Home
@@ -43,7 +54,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                className="hover:text-gray-500 text-xl"
+                                className="hover:text-white text-xl duration-500 ease-in-out hover:text-2xl"
                                 href={"/main/about"}
                             >
                                 About
@@ -51,7 +62,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                className="hover:text-gray-500 text-xl"
+                                className="hover:text-white text-xl duration-500 ease-in-out hover:text-2xl"
                                 href={"/main/portofolio"}
                             >
                                 Portofolio
@@ -68,11 +79,11 @@ const Navbar = () => {
                         title="WhatsApp"
                         target="_blank"
                     >
-                        <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2 rounded-full">
+                        <button className="bg-green-500 text-white font-semibold px-5 py-2 rounded-full flex items-center justify-center gap-x-2 hover:bg-green-600 duration-500 ease-in-out hover:text-xl">
+                            <IoCallOutline className="text-2xl" />
                             Contact Me
                         </button>
                     </Link>
-                    <LuMenu className="text-3xl cursor-pointer" />
                 </div>
             </nav>
         </main>

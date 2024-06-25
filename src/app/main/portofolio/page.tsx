@@ -31,7 +31,7 @@ const PortofolioPage = () => {
     ];
 
     return (
-        <main className="w-10/12 gap-y-10 my-20 mx-auto  flex flex-col">
+        <main className="w-10/12 gap-y-10 py-40 mx-auto flex flex-col">
             <section className="space-y-5">
                 <h1 className="text-5xl font-semibold">Portofolio Title</h1>
                 <h1 className="text-lg w-4/12 text-[#828282]">
@@ -39,7 +39,7 @@ const PortofolioPage = () => {
                     what you`re all about—no biggie
                 </h1>
             </section>
-            <div className="flex pt-10">
+            <div className="flex">
                 <div className="flex flex-wrap gap-x-0  justify-evenly 2xl:w-full 2xl:gap-y-10">
                     {LIST_CARD_PORTO.map((item, index) => (
                         <Link
