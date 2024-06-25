@@ -37,7 +37,7 @@ const config: Config = {
         },
     },
     plugins: [
-        function ({ addUtilities }) {
+        function ({ addUtilities }: any) {
             const newUtitlities = {
                 ".no-scrollbar::-webkit-scrollbar": {
                     display: "none",
