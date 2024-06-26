@@ -2,10 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoCallOutline } from "react-icons/io5";
-
+import { SidebarWithBurgerMenu } from "../../drawer";
 const Navbar = () => {
     const checkoutTextGenerator = React.useMemo(() => {
-        let itemText = "";
         const textString = `Halo admin Magin, saya baru saja melakukan checkout melalui website, berikut keranjang saya,`;
         const textResult = `%0ADengan total sebesar 10000`;
         const reciverText = `Berikut alamat saya, Albar, Jlan h mando, Jakarta - Cilandak`;
@@ -20,10 +19,10 @@ const Navbar = () => {
         );
     }, []);
     return (
-        <main className="w-full bg-[#3988D1] absolute px-20 py-2 ">
+        <main className="w-full bg-[#3988D1] absolute p-3">
             <nav className="flex justify-between items-center ">
                 <Link
-                    className="flex items-center justify-center "
+                    className="flex items-center justify-center -space-x-2 "
                     href={"/main/home"}
                 >
                     <Image
@@ -31,18 +30,21 @@ const Navbar = () => {
                         width={80}
                         height={80}
                         alt=""
-                        className="w-20"
+                        className="w-16"
                     />
-                    <div className="text-white mt-2 -space-y-2">
-                        <h1 className="uppercase text-xl">
+                    <div className="text-white mt-2 -space-y-1">
+                        <h1 className="uppercase text-sm">
                             cipta kirana karya
                         </h1>
-                        <h2 className="text-lg font-extralight">
+                        <h2 className="text-xs font-extralight">
                             indonesian asphalt
                         </h2>
                     </div>
                 </Link>
-                <div className="">
+                <div className="md:hidden">
+                    <SidebarWithBurgerMenu />
+                </div>
+                <div className="hidden md:flex">
                     <ul className="flex items-center gap-[4vw]">
                         <li>
                             <Link
@@ -70,7 +72,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="items-center gap-6 hidden md:flex">
                     <Link
                         className=""
                         rel="nofollow"

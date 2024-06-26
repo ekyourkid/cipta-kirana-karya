@@ -2,76 +2,25 @@ import React from "react";
 import Image from "next/image";
 
 const Comitment = () => {
-    const LISTCARD = [
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-    ];
-
-    const LISTEXP = [
-        {
-            label: "11",
-            text: "Years Experience",
-        },
-        {
-            label: "7",
-            text: "Contries Served",
-        },
-        {
-            label: "99.99%",
-            text: "Satisfied Customer",
-        },
-        {
-            label: "20",
-            text: "Support Staff",
-        },
-    ];
     return (
         <main className="w-full h-screen flex flex-col items-center">
-            <div className="w-4/12 text-center space-y-10">
-                <h1 className="uppercase text-center font-semibold text-5xl">
+            <div className="w-8/12 text-center">
+                <h1 className="uppercase text-center font-semibold text-xl">
                     our commitment for our road
                 </h1>
-                <p className="text-lg ">
+                <p className="text-sm pt-5">
                     kontraktor jasa pengaspalan yang sudah berpengalaman sejak
                     tahun 2000. Bidang keahlian mengerjakan jasa pengaspalan.
                 </p>
             </div>
-            <article className="w-11/12 grid grid-cols-3 mt-16 gap-x-4">
+            <article className="w-11/12 grid grid-cols-1 mt-16 gap-4">
                 <div className=" space-y-4">
-                    <div className="w-full h-60 bg-[#939393] rounded-2xl p-5 space-y-1 duration-500 ease-in-out hover:h-80 cursor-default">
-                        <p className="text-white text-lg">
+                    <div className="w-full h-60 bg-[#939393] rounded-2xl p-5 space-y-3 ">
+                        <p className="text-white text-sm">
                             Kontraktor jasa Pengaspalan dengan bahan aspal
                             terbaik.
                         </p>
-                        <h1 className="text-5xl text-white font-semibold">
+                        <h1 className="text-4xl text-white font-semibold">
                             100% asphalt durability in any weather
                         </h1>
                     </div>
@@ -91,12 +40,12 @@ const Comitment = () => {
                         backgroundSize: "700px 1200px",
                         borderRadius: 16,
                     }}
-                    className="flex flex-col p-8 justify-between text-white"
+                    className="flex flex-col p-8 justify-between text-white space-y-3"
                 >
                     <h1 className="text-4xl font-semibold">
                         More affordable prices in each package
                     </h1>
-                    <p className="text-lg">
+                    <p className="text-sm">
                         Harga bisa menyesuaikan dengan project yang dikerjakan.
                     </p>
                 </div>
@@ -108,11 +57,11 @@ const Comitment = () => {
                         alt=""
                         className="w-full h-96 rounded-2xl"
                     />
-                    <div className="w-full h-60 bg-[#939393] rounded-2xl p-5 space-y-14 duration-500 ease-in-out hover:h-80 cursor-default">
+                    <div className="w-full h-60 bg-[#939393] rounded-2xl p-5 space-y-3">
                         <h1 className="text-4xl text-white font-semibold">
                             The most experienced contractor in Indonesia
                         </h1>
-                        <p className="text-white text-lg">
+                        <p className="text-white text-sm">
                             Kontraktor jasa Pengaspalan yang sudah
                             berpengalaman.
                         </p>

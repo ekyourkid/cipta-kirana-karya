@@ -33,27 +33,27 @@ const Footer = () => {
         },
     ];
     return (
-        <main className="w-full gap-x-10 px-20 pt-10 pb-32 grid grid-cols-4 bg-[#3988D1]">
-            <article className="space-y-10">
-                <div className="flex items-center">
+        <main className="w-full gap-x-10 pt-10 pb-5 grid grid-cols-1 bg-[#3988D1]">
+            <article className="space-y-5">
+                <div className="flex items-center -space-x-1">
                     <Image
                         src={"/images/logo.png"}
                         alt=""
                         width={100}
                         height={100}
-                        className="w-20 rounded-xl"
+                        className="w-16 rounded-xl"
                     />
                     <div className="text-white mt-2 -space-y-2">
-                        <h1 className="uppercase text-xl">
+                        <h1 className="uppercase text-base">
                             cipta kirana karya
                         </h1>
-                        <h2 className="text-lg font-extralight">
+                        <h2 className="text-sm font-extralight">
                             indonesian asphalt
                         </h2>
                     </div>
                 </div>
-                <div className="">
-                    <p className="text-white text-base font-light">
+                <div className="px-7">
+                    <p className="text-white text-xs font-light">
                         It is a long established fact that a reader will be
                         distracted by the readable content of a page when
                         looking at its layout. The point of using Lorem Ipsum is
@@ -62,40 +62,42 @@ const Footer = () => {
                         making it look like readable English.
                     </p>
                 </div>
-                <div className="flex space-x-5 items-center ">
-                    <FaFacebookF className="text-white text-3xl hover:bg-[#F77E53] w-10 h-10 p-2 rounded-xl cursor-pointer" />
-                    <FaInstagram className="text-white text-3xl hover:bg-[#F77E53] w-10 h-10 p-1 rounded-xl cursor-pointer" />
-                    <FaWhatsapp className="text-white text-3xl hover:bg-[#F77E53] w-10 h-10 p-1 rounded-xl cursor-pointer" />
-                    <MdOutlineEmail className="text-white text-3xl hover:bg-[#F77E53] w-10 h-10 p-1 rounded-xl cursor-pointer" />
-                </div>
             </article>
-            <article className="space-y-5 flex flex-col w-1/2 items-start pt-10 pl-32">
-                <h1 className="text-2xl font-semibold text-white">Navigate</h1>
-                {NAVIGATION_LIST.map((value, index) => {
-                    return (
-                        <ul key={index}>
-                            <li className="duration-500 ease-in-out hover:text-xl hover:text-white hover:border-b-2 border-blue-800 cursor-pointer">
-                                {value.label}
-                            </li>
-                        </ul>
-                    );
-                })}
-            </article>
-            <article className="space-y-5 flex flex-col w-1/2 items-start pt-10 ">
-                <h1 className="text-2xl font-semibold text-white">Section</h1>
-                {SECTION_LIST.map((value, index) => {
-                    return (
-                        <ul key={index}>
-                            <li className="duration-500 ease-in-out hover:text-xl hover:text-white cursor-pointer hover:border-b-2 border-blue-800">
-                                {value.label}
-                            </li>
-                        </ul>
-                    );
-                })}
-            </article>
-            <article className="flex items-end justify-end gap-x-1">
+            <section className="flex justify-center py-7">
+                <article className="flex flex-col w-1/2 items-center space-y-3">
+                    <h1 className="text-lg font-normal text-white">Navigate</h1>
+                    {NAVIGATION_LIST.map((value, index) => {
+                        return (
+                            <ul key={index}>
+                                <li className="duration-500 text-sm ease-in-out hover:text-lg hover:text-white hover:border-b-2 border-blue-800 cursor-pointer">
+                                    {value.label}
+                                </li>
+                            </ul>
+                        );
+                    })}
+                </article>
+                <article className="flex flex-col w-1/2 items-center space-y-3">
+                    <h1 className="text-lg font-normal text-white">Section</h1>
+                    {SECTION_LIST.map((value, index) => {
+                        return (
+                            <ul key={index}>
+                                <li className="duration-500 text-sm ease-in-out hover:text-lg hover:text-white cursor-pointer hover:border-b-2 border-blue-800">
+                                    {value.label}
+                                </li>
+                            </ul>
+                        );
+                    })}
+                </article>
+            </section>
+            <div className="flex space-x-5 items-center justify-center ">
+                <FaFacebookF className="text-white text-3xl hover:bg-blue-700 w-8 h-8 p-2 rounded-xl cursor-pointer" />
+                <FaInstagram className="text-white text-3xl hover:bg-[#E1306C] w-8 h-8 p-1 rounded-xl cursor-pointer" />
+                <FaWhatsapp className="text-white text-3xl hover:bg-green-500 w-8 h-8 p-1 rounded-xl cursor-pointer" />
+                <MdOutlineEmail className="text-white text-3xl hover:bg-red-600 w-8 h-8 p-1 rounded-xl cursor-pointer" />
+            </div>
+            <article className="flex items-center justify-center gap-x-1 text-xs pt-5">
                 <FaRegCopyright className="text-white" />
-                <h1 className="text-[10px] text-white">
+                <h1 className="text-[8px] text-white">
                     Copyright Cipta Kirana Karya 2024 All rights reserved.
                 </h1>
             </article>

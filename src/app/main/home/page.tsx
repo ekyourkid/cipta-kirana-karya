@@ -22,121 +22,41 @@ const HomePage = () => {
             "%0A"
         );
     }, []);
-
-    const LIST_CARD = [
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-        {
-            imgUrl: "/images/cardComitment.jpeg",
-            label: "Kualitas Aspal",
-            text: "orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dignissimos.",
-        },
-    ];
-
-    const LIST_EXPERIENCE = [
-        {
-            label: "11",
-            text: "Years Experience",
-        },
-        {
-            label: "7",
-            text: "Contries Served",
-        },
-        {
-            label: "99.99%",
-            text: "Satisfied Customer",
-        },
-        {
-            label: "20",
-            text: "Support Staff",
-        },
-    ];
-    const LISTCARD = [
-        {
-            img: "/images/cardComitment.jpeg",
-            title: "Lorem Ipsum Dolor",
-            text: "It is a long established fact that a reader will be distracted by the readable",
-        },
-        {
-            img: "/images/cardComitment.jpeg",
-            title: "Lorem Ipsum Dolor",
-            text: "It is a long established fact that a reader will be distracted by the readable",
-        },
-        {
-            img: "/images/cardComitment.jpeg",
-            title: "Lorem Ipsum Dolor",
-            text: "It is a long established fact that a reader will be distracted by the readable",
-        },
-        {
-            img: "/images/cardComitment.jpeg",
-            title: "Lorem Ipsum Dolor",
-            text: "It is a long established fact that a reader will be distracted by the readable",
-        },
-        {
-            img: "/images/cardComitment.jpeg",
-            title: "Lorem Ipsum Dolor",
-            text: "It is a long established fact that a reader will be distracted by the readable",
-        },
-    ];
     return (
         <main>
             {/* hero section */}
             <section className="w-full h-screen bg-[url('/images/image-bg.jpg')]">
-                <article className="h-screen w-full bg-black/30 flex flex-col items-center justify-evenly">
-                    <div className="w-1/2 text-center space-y-5">
-                        <h1 className="text-6xl uppercase text-white font-semibold">
+                <article className="h-screen w-full bg-black/30 flex flex-col items-center space-y-20 justify-center">
+                    <div className="xs:w-full 2xl:w-1/2 text-center flex flex-col items-center space-y-5 xs:space-y-2">
+                        <h1 className="text-3xl w-8/12 xs:text-3xl 2xl:text-6xl uppercase text-white font-semibold">
                             kontraktor jalan aspal
                         </h1>
-                        <p className="text-lg text-white">
+                        <p className="text-xs xs:text-sm 2xl:text-lg text-white w-8/12 xs:w-9/12 xs:font-light">
                             kontraktor jasa pengaspalan yang sudah berpengalaman
                             sejak tahun 2000. Bidang keahlian mengerjakan jasa
                             pengaspalan, jasa paving block, cor beton, cat
                             marka, kanstin, saluran, cut and fill, suplayer
                             matrial, dsb. Melayani wilayah Jabodetabek, Provinsi
-                            Banten, Jawa Barat, dan Jawa Tengah
+                            Banten, Jawa Barat, dan Jawa Tengah.
                         </p>
                     </div>
-                    <button className="flex items-center text-3xl text-white cursor-pointer font-light duration-500 ease-in-out hover:text-4xl space-x-2 border rounded-lg p-2">
+                    <button className="flex items-center xs:text-xl 2xl:text-3xl text-white cursor-pointer font-light duration-500 ease-in-out hover:text-xl space-x-2 border rounded-lg p-2">
                         <h1>Our Works</h1>
                         <PiArrowSquareDown />
                     </button>
                 </article>
             </section>
-            <article className="w-10/12 mx-auto pt-32 pb-10">
-                {/* comitment section */}
+            <article className="w-full py-20 ">
                 <Comitment />
             </article>
-            <article className="">
+            <article className="w-full pt-[1000px]">
                 <Cover />
             </article>
-            <article className="w-10/12 mx-auto pt-28">
+            <article className="w-10/12 mx-auto">
                 <CaraouselCard />
             </article>
             <OurClient />
-            <article className="w-10/12 mx-auto py-32 flex items-center justify-center">
+            <article className="p-5">
                 <ContactUs />
             </article>
         </main>
