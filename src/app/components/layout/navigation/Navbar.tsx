@@ -19,10 +19,10 @@ const Navbar = () => {
         );
     }, []);
     return (
-        <main className="w-full bg-[#3988D1] absolute p-3">
+        <main className="w-full bg-[#3988D1] absolute p-3 sm:px-5 lg:px-7 xl:px-16 2xl:px-20 shadow-md">
             <nav className="flex justify-between items-center ">
                 <Link
-                    className="flex items-center justify-center -space-x-2 "
+                    className="flex items-center justify-center -space-x-2 sm:-space-x-1 "
                     href={"/main/home"}
                 >
                     <Image
@@ -30,13 +30,13 @@ const Navbar = () => {
                         width={80}
                         height={80}
                         alt=""
-                        className="w-16"
+                        className="w-16 sm:w-[66px] lg:w-[70px] 2xl:w-[80px]"
                     />
-                    <div className="text-white mt-2 -space-y-1">
-                        <h1 className="uppercase text-sm">
+                    <div className="text-white mt-2 -space-y-1 lg:-space-y-2 ">
+                        <h1 className="uppercase text-sm sm:text-base lg:text-lg 2xl:text-xl">
                             cipta kirana karya
                         </h1>
-                        <h2 className="text-xs font-extralight">
+                        <h2 className="text-xs sm:text-sm lg:text-base 2xl:text-lg font-extralight">
                             indonesian asphalt
                         </h2>
                     </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
                     <ul className="flex items-center gap-[4vw]">
                         <li>
                             <Link
-                                className="hover:text-white text-xl duration-500 ease-in-out hover:text-2xl"
+                                className="hover:text-white text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
                                 href={"/main/home"}
                             >
                                 Home
@@ -56,7 +56,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                className="hover:text-white text-xl duration-500 ease-in-out hover:text-2xl"
+                                className="hover:text-white text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
                                 href={"/main/about"}
                             >
                                 About
@@ -64,7 +64,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                className="hover:text-white text-xl duration-500 ease-in-out hover:text-2xl"
+                                className="hover:text-white text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
                                 href={"/main/portofolio"}
                             >
                                 Portofolio
@@ -74,17 +74,15 @@ const Navbar = () => {
                 </div>
                 <div className="items-center gap-6 hidden md:flex">
                     <Link
-                        className=""
+                        className="bg-green-500 text-white text-base xl:text-lg 2xl:text-xl px-3 py-2 2xl:px-5 font-semibold rounded-full flex items-center justify-center gap-x-2 hover:bg-green-700 duration-500 ease-in-out hover:text-lg xl:hover:text-xl 2xl:hover:text-2xl transition-all"
                         rel="nofollow"
                         href={`https://api.whatsapp.com/send?phone=6282113272557&text=${checkoutTextGenerator}`}
                         data-action="share/whatsapp/share"
                         title="WhatsApp"
                         target="_blank"
                     >
-                        <button className="bg-green-500 text-white font-semibold px-5 py-2 rounded-full flex items-center justify-center gap-x-2 hover:bg-green-600 duration-500 ease-in-out hover:text-xl">
-                            <IoCallOutline className="text-2xl" />
-                            Contact Me
-                        </button>
+                        <IoCallOutline className="text-lg" />
+                        Contact Me
                     </Link>
                 </div>
             </nav>

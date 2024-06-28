@@ -62,9 +62,9 @@ export function SidebarWithBurgerMenu() {
                 {...({} as any)}
             >
                 {isDrawerOpen ? (
-                    <XMarkIcon className="h-6 w-6 stroke-2 text-white" />
+                    <XMarkIcon className="h-6 w-6 sm:w-7 sm:h-7 stroke-2 text-white" />
                 ) : (
-                    <Bars3Icon className="h-6 w-6 stroke-2 text-white" />
+                    <Bars3Icon className="h-6 w-6 sm:w-7 sm:h-7 stroke-2 text-white" />
                 )}
             </IconButton>
             <Drawer open={isDrawerOpen} onClose={closeDrawer} {...({} as any)}>

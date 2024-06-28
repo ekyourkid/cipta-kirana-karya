@@ -37,14 +37,14 @@ const OurClient = () => {
         },
     ];
     return (
-        <section className="flex space-x-16 overflow-hidden">
+        <section className="flex space-x-16 w-full 2xl:w-10/12 overflow-hidden">
             <Marquee pauseOnHover>
                 <div className="flex grayscale ">
                     {PARTNER_LIST.map((partner) => (
                         <Image
                             key={partner.id}
                             src={partner?.image}
-                            className="aspect-video w-52 object-contain grayscale hover:grayscale-0"
+                            className="aspect-video w-52 md:w-56 lg:w-60 xl:w-64 2xl:w-72 object-contain grayscale hover:grayscale-0"
                             alt={partner.name}
                             width={200}
                             height={200}

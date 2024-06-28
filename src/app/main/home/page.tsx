@@ -23,15 +23,15 @@ const HomePage = () => {
         );
     }, []);
     return (
-        <main>
+        <main className="">
             {/* hero section */}
             <section className="w-full h-screen bg-[url('/images/image-bg.jpg')]">
                 <article className="h-screen w-full bg-black/30 flex flex-col items-center space-y-20 justify-center">
-                    <div className="xs:w-full 2xl:w-1/2 text-center flex flex-col items-center space-y-5 xs:space-y-2">
-                        <h1 className="text-3xl w-8/12 xs:text-3xl 2xl:text-6xl uppercase text-white font-semibold">
-                            kontraktor jalan aspal
+                    <div className="w-full text-center flex flex-col items-center space-y-5 ">
+                        <h1 className="text-2xl sm:text-3xl lg:text-5xl 2xl:text-6xl w-8/12 lg:w-6/12 uppercase text-white font-semibold">
+                            kontraktor aspal jalan
                         </h1>
-                        <p className="text-xs xs:text-sm 2xl:text-lg text-white w-8/12 xs:w-9/12 xs:font-light">
+                        <p className="text-xs sm:text-sm lg:text-base 2xl:text-lg text-white w-8/12 lg:w-7/12 2xl:w-5/12 font-light 2xl:font-normal">
                             kontraktor jasa pengaspalan yang sudah berpengalaman
                             sejak tahun 2000. Bidang keahlian mengerjakan jasa
                             pengaspalan, jasa paving block, cor beton, cat
@@ -40,7 +40,7 @@ const HomePage = () => {
                             Banten, Jawa Barat, dan Jawa Tengah.
                         </p>
                     </div>
-                    <button className="flex items-center xs:text-xl 2xl:text-3xl text-white cursor-pointer font-light duration-500 ease-in-out hover:text-xl space-x-2 border rounded-lg p-2">
+                    <button className="flex items-center text-lg sm:text-xl lg:text-2xl text-white cursor-pointer font-light duration-500 ease-in-out hover:text-xl sm:hover:text-2xl 2xl:hover:text-3xl space-x-2 border rounded-lg p-2 lg:px-5 transition-all">
                         <h1>Our Works</h1>
                         <PiArrowSquareDown />
                     </button>
@@ -49,14 +49,16 @@ const HomePage = () => {
             <article className="w-full py-20 ">
                 <Comitment />
             </article>
-            <article className="w-full pt-[1000px]">
+            <article className="w-full pt-[1000px] sm:pt-[900px] md:pt-[800px] lg:pt-[700px] xl:pt-[200px] 2xl:pt-[10px]">
                 <Cover />
             </article>
-            <article className="w-10/12 mx-auto">
+            <article className="w-10/12 mx-auto py-20">
                 <CaraouselCard />
             </article>
-            <OurClient />
-            <article className="p-5">
+            <article className="flex justify-center">
+                <OurClient />
+            </article>
+            <article className="py-28 px-5 flex justify-center">
                 <ContactUs />
             </article>
         </main>
