@@ -67,7 +67,7 @@ const Navbar = () => {
                                 className="hover:text-white text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
                                 href={"/main/portofolio"}
                             >
-                                Portofolio
+                                Track Record
                             </Link>
                         </li>
                     </ul>

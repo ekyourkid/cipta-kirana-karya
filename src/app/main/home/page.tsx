@@ -25,7 +25,15 @@ const HomePage = () => {
     return (
         <main className="">
             {/* hero section */}
-            <section className="w-full h-screen bg-[url('/images/image-bg.jpg')]">
+            <section
+                style={{
+                    backgroundImage: `url('/images/image-bg.jpg')`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    objectFit: "cover",
+                }}
+                className="w-full h-screen"
+            >
                 <article className="h-screen w-full bg-black/30 flex flex-col items-center space-y-20 justify-center">
                     <div className="w-full text-center flex flex-col items-center space-y-5 ">
                         <h1 className="text-2xl sm:text-3xl lg:text-5xl 2xl:text-6xl w-8/12 lg:w-6/12 uppercase text-white font-semibold">

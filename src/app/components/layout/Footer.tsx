@@ -52,7 +52,7 @@ const Footer = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="pl-7 lg:pl-0">
+                <div className="px-5 lg:pl-0">
                     <p className="text-white text-xs sm:text-sm lg:text-base 2xl:text-lg font-light xl:w-11/12 2xl:w-10/12">
                         It is a long established fact that a reader will be
                         distracted by the readable content of a page when
