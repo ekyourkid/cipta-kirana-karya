@@ -62,14 +62,14 @@ export function SidebarWithBurgerMenu() {
                 {...({} as any)}
             >
                 {isDrawerOpen ? (
-                    <XMarkIcon className="h-6 w-6 sm:w-7 sm:h-7 stroke-2 text-white" />
+                    <XMarkIcon className="h-6 w-6 stroke-2 text-black rounded-md " />
                 ) : (
-                    <Bars3Icon className="h-6 w-6 sm:w-7 sm:h-7 stroke-2 text-white" />
+                    <Bars3Icon className="h-8 w-8 stroke-2 text-black rounded-md" />
                 )}
             </IconButton>
             <Drawer open={isDrawerOpen} onClose={closeDrawer} {...({} as any)}>
                 <Card
-                    color="transparent"
+                    color="white"
                     shadow={false}
                     className="h-[calc(100vh-2rem)] w-full p-4"
                     {...({} as any)}
@@ -102,7 +102,7 @@ export function SidebarWithBurgerMenu() {
                                     color="blue-gray"
                                     className="mr-auto font-normal text-base"
                                 >
-                                    Portofolio
+                                    Track Record
                                 </Typography>
                             </Link>
                         </ListItem>

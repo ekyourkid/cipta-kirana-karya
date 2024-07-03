@@ -48,6 +48,7 @@ const CE_Swiper = () => {
                             backgroundPosition: "0px 40%",
                             backgroundPositionX: "center",
                             backgroundPositionY: "center",
+                            borderRadius: 10,
                         }}
                     ></article>
                 </SwiperSlide>

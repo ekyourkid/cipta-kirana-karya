@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { cn } from "../../helper/cn";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { IoCallOutline } from "react-icons/io5";
 import { SidebarWithBurgerMenu } from "../../drawer";
+
 const Navbar = () => {
+    const urlPathname = usePathname();
+    const [scrollY, setScrollY] = useState(0);
     const checkoutTextGenerator = React.useMemo(() => {
         const textString = `Halo admin Magin, saya baru saja melakukan checkout melalui website, berikut keranjang saya,`;
         const textResult = `%0ADengan total sebesar 10000`;
@@ -18,12 +24,34 @@ const Navbar = () => {
             "%0A"
         );
     }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-        <main className="w-full bg-[#3988D1] absolute p-3 sm:px-5 lg:px-7 xl:px-16 2xl:px-20 shadow-md">
+        // className="fixed top-0 z-10 w-full bg-[#3988D1] p-3 sm:px-5 lg:px-7 xl:px-16 2xl:px-20 shadow-md"
+        <main
+            className={cn(
+                scrollY >= 100 || urlPathname !== "/"
+                    ? "isolate bg-white/50 text-black shadow-sm backdrop-blur-sm"
+                    : "bg-transparent text-white",
+                "transform-gpu transition-all delay-100",
+                "fixed top-0 z-50 w-full py-3 px-2 sm:px-10 xl:px-16 2xl:px-28 shadow-md "
+            )}
+        >
             <nav className="flex justify-between items-center ">
                 <Link
-                    className="flex items-center justify-center -space-x-2 sm:-space-x-1 "
-                    href={"/main/home"}
+                    className="flex items-center justify-center -space-x-2 sm:-space-x-1"
+                    href={"/"}
                 >
                     <Image
                         src={"/images/logo.png"}
@@ -32,7 +60,7 @@ const Navbar = () => {
                         alt=""
                         className="w-16 sm:w-[66px] lg:w-[70px] 2xl:w-[80px]"
                     />
-                    <div className="text-white mt-2 -space-y-1 lg:-space-y-2 ">
+                    <div className="mt-2 -space-y-1 lg:-space-y-2 ">
                         <h1 className="uppercase text-sm sm:text-base lg:text-lg 2xl:text-xl">
                             cipta kirana karya
                         </h1>
@@ -48,26 +76,26 @@ const Navbar = () => {
                     <ul className="flex items-center gap-[4vw]">
                         <li>
                             <Link
-                                className="hover:text-white text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
-                                href={"/main/home"}
+                                className="text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
+                                href={"/"}
                             >
                                 Home
                             </Link>
                         </li>
                         <li>
                             <Link
-                                className="hover:text-white text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
+                                className="text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
                                 href={"/main/about"}
                             >
-                                About
+                                About Us
                             </Link>
                         </li>
                         <li>
                             <Link
-                                className="hover:text-white text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
+                                className="text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
                                 href={"/main/portofolio"}
                             >
-                                Track Record
+                                Track Records
                             </Link>
                         </li>
                     </ul>

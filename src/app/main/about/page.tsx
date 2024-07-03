@@ -6,7 +6,7 @@ import { GrUserWorker } from "react-icons/gr";
 
 const AboutPage = () => {
     return (
-        <main className="w-full mx-auto sm:w-11/12 md:w-10/12 lg:w-11/12 2xl:w-11/12 grid grid-cols-1 py-32 px-5 gap-6 lg:gap-y-24 ">
+        <main className="w-full mx-auto sm:w-11/12 md:w-10/12 lg:w-11/12 2xl:w-11/12 grid grid-cols-1 py-32 px-12 gap-6 lg:gap-y-24 ">
             <section className="w-full space-y-10 lg:space-y-0 lg:flex lg:px-10 xl:px-16 2xl:px-32 lg:h-96">
                 <div className="w-full flex flex-col xl:justify-start lg:pr-10">
                     <div>
