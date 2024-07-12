@@ -11,18 +11,9 @@ const Navbar = () => {
     const urlPathname = usePathname();
     const [scrollY, setScrollY] = useState(0);
     const checkoutTextGenerator = React.useMemo(() => {
-        const textString = `Halo admin Magin, saya baru saja melakukan checkout melalui website, berikut keranjang saya,`;
-        const textResult = `%0ADengan total sebesar 10000`;
-        const reciverText = `Berikut alamat saya, Albar, Jlan h mando, Jakarta - Cilandak`;
+        const textString = `Halo admin, saya ingin menanyakan lebih lanjut mengenai layanan pengaspalan jalan yang Anda tawarkan. Bisakah Anda memberikan informasi detail? Terima kasih.`;
 
-        return (
-            textString.replace(" ", "%20") +
-            "%0A" +
-            textResult.replace(" ", "%20") +
-            "%0A" +
-            reciverText.replace(" ", "%20") +
-            "%0A"
-        );
+        return textString.replace(" ", "%20");
     }, []);
 
     useEffect(() => {
@@ -77,14 +68,6 @@ const Navbar = () => {
                         <li>
                             <Link
                                 className="text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
-                                href={"/"}
-                            >
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                className="text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
                                 href={"/main/about"}
                             >
                                 About Us
@@ -96,6 +79,15 @@ const Navbar = () => {
                                 href={"/main/portofolio"}
                             >
                                 Track Records
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className="text-base lg:text-lg 2xl:text-xl duration-500 ease-in-out hover:text-lg lg:hover:text-xl 2xl:hover:text-2xl transition-all"
+                                href={"/assets/price.pdf"}
+                                target="_blank"
+                            >
+                                Our Price
                             </Link>
                         </li>
                     </ul>

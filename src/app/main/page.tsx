@@ -9,6 +9,7 @@ import ContactUs from "@/app/components/contactUs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper/modules";
 import { PiArrowSquareDown } from "react-icons/pi";
+import { HERO_IMAGE } from "@/utils/data";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,24 +18,13 @@ import "swiper/css/effect-fade";
 
 const HomePage = () => {
     const section1 = useRef(null);
-    const scrolHandler = (elmRef) => {
+    const scrolHandler = (elmRef: any) => {
         window.scrollTo({
             top: elmRef.current.offsetTop,
             behavior: "smooth",
         });
     };
-    const LIST_IMAGE = [
-        {
-            imgelink: "/images/image-comit.jpg",
-        },
-        {
-            imgelink: "/images/cardComitment.jpeg",
-        },
 
-        {
-            imgelink: "/images/comit2-image.jpg",
-        },
-    ];
     return (
         <main className="">
             {/* hero section */}
@@ -53,7 +43,7 @@ const HomePage = () => {
                     }}
                     modules={[EffectFade, Autoplay]}
                 >
-                    {LIST_IMAGE?.map((item, index) => (
+                    {HERO_IMAGE?.map((item, index) => (
                         <SwiperSlide key={index}>
                             <article
                                 className="h-screen w-full overflow-hidden"

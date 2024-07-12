@@ -8,7 +8,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { FaRegCopyright } from "react-icons/fa6";
 import {
     IconButton,
     Typography,
@@ -28,20 +27,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export function SidebarWithBurgerMenu() {
     const checkoutTextGenerator = React.useMemo(() => {
-        let itemText = "";
-        const textString = `Halo admin Magin, saya baru saja melakukan checkout melalui website, berikut keranjang saya,`;
-        const textResult = `%0ADengan total sebesar 10000`;
-        const reciverText = `Berikut alamat saya, Albar, Jlan h mando, Jakarta - Cilandak`;
-
-        return (
-            textString.replace(" ", "%20") +
-            "%0A" +
-            textResult.replace(" ", "%20") +
-            "%0A" +
-            reciverText.replace(" ", "%20") +
-            "%0A"
-        );
+        const textString = `Halo admin, saya ingin menanyakan lebih lanjut mengenai layanan pengaspalan jalan yang Anda tawarkan. Bisakah Anda memberikan informasi detail? Terima kasih.`;
+        return textString.replace(" ", "%20");
     }, []);
+
     const [open, setOpen] = React.useState(0);
     const [openAlert, setOpenAlert] = React.useState(true);
     const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
@@ -71,7 +60,7 @@ export function SidebarWithBurgerMenu() {
                 <Card
                     color="white"
                     shadow={false}
-                    className="h-[calc(100vh-2rem)] w-full p-4"
+                    className="h-screen w-full p-4"
                     {...({} as any)}
                 >
                     <div className=" flex items-center gap-4 -space-x-3 ">
@@ -129,7 +118,12 @@ export function SidebarWithBurgerMenu() {
                                 color="blue-gray"
                                 className="mr-auto font-normal text-base"
                             >
-                                Get In Touch
+                                <Link
+                                    href={"/assets/price.pdf"}
+                                    target="_blank"
+                                >
+                                    Our Price
+                                </Link>
                             </Typography>
                         </ListItem>
                         <ListItem {...({} as any)} className="p-3">
@@ -163,10 +157,23 @@ export function SidebarWithBurgerMenu() {
                                 road asphalt.
                             </p>
                         </div>
-                        <div className="flex space-x-5 items-center pt-5">
-                            <FaFacebookF className="text-white text-3xl hover:bg-blue-700 w-8 h-8 p-2 rounded-xl cursor-pointer" />
-                            <FaInstagram className="text-white text-3xl hover:bg-[#E1306C] w-8 h-8 p-1 rounded-xl cursor-pointer" />
-                            <FaWhatsapp className="text-white text-3xl hover:bg-green-500 w-8 h-8 p-1 rounded-xl cursor-pointer" />
+                        <div className="flex space-x-2 items-center pt-5">
+                            <Link
+                                href={
+                                    "https://www.facebook.com/cipta.k.karya.9?mibextid=ZbWKwL"
+                                }
+                                target="_blank"
+                            >
+                                <FaFacebookF className="text-white text-3xl hover:bg-blue-700 w-8 h-8 p-2 rounded-xl cursor-pointer" />
+                            </Link>
+                            <Link
+                                href={
+                                    "https://www.instagram.com/ciptakiranakarya/"
+                                }
+                                target="_blank"
+                            >
+                                <FaInstagram className="text-white text-3xl hover:bg-[#E1306C] w-8 h-8 p-1 rounded-xl cursor-pointer" />
+                            </Link>
                             <MdOutlineEmail className="text-white text-3xl hover:bg-red-600 w-8 h-8p-1 rounded-xl cursor-pointer" />
                         </div>
                     </Alert>

@@ -5,8 +5,14 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaRegCopyright } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
+    const checkoutTextGenerator = React.useMemo(() => {
+        const textString = `Halo admin, saya ingin menanyakan lebih lanjut mengenai layanan pengaspalan jalan yang Anda tawarkan. Bisakah Anda memberikan informasi detail? Terima kasih.`;
+        return textString.replace(" ", "%20");
+    }, []);
+
     const SECTION_LIST = [
         {
             label: "Comitment",
@@ -63,9 +69,29 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="hidden lg:flex space-x-5 items-center justify-center ">
-                    <FaFacebookF className="text-white hover:bg-blue-700 w-8 h-8 md:w-10 md:h-10 p-2 rounded-xl cursor-pointer" />
-                    <FaInstagram className="text-white hover:bg-[#E1306C] w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
-                    <FaWhatsapp className="text-white hover:bg-green-500 w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
+                    <Link
+                        href={
+                            "https://www.facebook.com/cipta.k.karya.9?mibextid=ZbWKwL"
+                        }
+                        target="_blank"
+                    >
+                        <FaFacebookF className="text-white hover:bg-blue-700 w-8 h-8 md:w-10 md:h-10 p-2 rounded-xl cursor-pointer" />
+                    </Link>
+                    <Link
+                        href={"https://www.instagram.com/ciptakiranakarya/"}
+                        target="_blank"
+                    >
+                        <FaInstagram className="text-white hover:bg-[#E1306C] w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
+                    </Link>
+                    <Link
+                        rel="nofollow"
+                        href={`https://api.whatsapp.com/send?phone=6282113272557&text=${checkoutTextGenerator}`}
+                        data-action="share/whatsapp/share"
+                        title="WhatsApp"
+                        target="_blank"
+                    >
+                        <FaWhatsapp className="text-white hover:bg-green-500 w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
+                    </Link>
                     <MdOutlineEmail className="text-white hover:bg-red-600 w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
                 </div>
             </article>
@@ -100,9 +126,29 @@ const Footer = () => {
                 </article>
             </section>
             <div className="lg:hidden flex space-x-5 items-center justify-center ">
-                <FaFacebookF className="text-white hover:bg-blue-700 w-8 h-8 md:w-10 md:h-10 p-2 rounded-xl cursor-pointer" />
-                <FaInstagram className="text-white hover:bg-[#E1306C] w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
-                <FaWhatsapp className="text-white hover:bg-green-500 w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
+                <Link
+                    href={
+                        "https://www.facebook.com/cipta.k.karya.9?mibextid=ZbWKwL"
+                    }
+                    target="_blank"
+                >
+                    <FaFacebookF className="text-white hover:bg-blue-700 w-8 h-8 md:w-10 md:h-10 p-2 rounded-xl cursor-pointer" />
+                </Link>
+                <Link
+                    href={"https://www.instagram.com/ciptakiranakarya/"}
+                    target="_blank"
+                >
+                    <FaInstagram className="text-white hover:bg-[#E1306C] w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
+                </Link>
+                <Link
+                    rel="nofollow"
+                    href={`https://api.whatsapp.com/send?phone=6282113272557&text=${checkoutTextGenerator}`}
+                    data-action="share/whatsapp/share"
+                    title="WhatsApp"
+                    target="_blank"
+                >
+                    <FaWhatsapp className="text-white hover:bg-green-500 w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
+                </Link>
                 <MdOutlineEmail className="text-white hover:bg-red-600 w-8 h-8 md:w-10 md:h-10 p-1 rounded-xl cursor-pointer" />
             </div>
             <article className="flex lg:w-fit items-center justify-center lg:items-center lg:justify-center gap-x-1 text-xs pt-5">

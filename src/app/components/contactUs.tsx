@@ -24,13 +24,9 @@ const ContactUs = () => {
         <section className="w-full sm:w-11/12 md:w-10/12 2xl:w-7/12 rounded-2xl shadow-2xl grid grid-cols-1 lg:grid-cols-2 ">
             <div className="flex justify-center">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4110.773369625027!2d106.80767740065505!3d-6.321951540765012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ee739923e0b7%3A0x6d05bb01da97915a!2sJl.%20H.%20Tohir%20II%2C%20RT.3%2FRW.4%2C%20Jagakarsa%2C%20Kec.%20Jagakarsa%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012620!5e0!3m2!1sid!2sid!4v1714634682673!5m2!1sid!2sid"
-                    // width="506"
-                    // height="300"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.133470146556!2d106.82366127604494!3d-6.2461364611623065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3da5bca2e91%3A0x4e3cd36934ecef85!2sLantai%20Jl.%20Mampang%20Prpt.%20Raya%20No.73a%2C%20RW.3%2C%20Tegal%20Parang%2C%20Kec.%20Mampang%20Prpt.%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012790!5e0!3m2!1sid!2sid!4v1720794211224!5m2!1sid!2sid"
                     className="rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl w-full h-[300px] sm:h-[400px] lg:h-[450px] xl:h-[600px]"
-                    // allowfullscreen=""
                     loading="lazy"
-                    // referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
             </div>
             <div className="flex flex-col w-full items-center justify-center py-5 xl:space-y-5 ">
