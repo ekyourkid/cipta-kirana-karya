@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { DefaultGallery } from "@/app/components/galery";
 import CE_Swiper from "@/app/components/swiper";
+import useDataFetcher from "@/app/components/useDataFetcher";
 
 const PortofolioPage = () => {
+    const data = useDataFetcher();
+    console.log(data);
     const LIST_PARTNERS = [
         {
             id: 0,
@@ -103,7 +105,7 @@ const PortofolioPage = () => {
                     </div>
                 </article>
             </section>
-            <section className="w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:px-10 mt-10 p-5 sm:pb-8 rounded-lg bg-blue-gray-200">
+            <section className="w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:px-10 mt-10 p-5 sm:pb-8 rounded-lg ">
                 <article className="w-full text-center py-5 text-xl xl:text-2xl font-medium">
                     <h1>Our Galery</h1>
                 </article>

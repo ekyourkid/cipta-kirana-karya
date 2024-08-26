@@ -2,24 +2,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper/modules";
+import { WITH_CLIENT_IMAGE } from "@/utils/data";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-
-const LIST_IMAGE = [
-    {
-        imgelink: "/images/image-comit.jpg",
-    },
-    {
-        imgelink: "/images/cardComitment.jpeg",
-    },
-
-    {
-        imgelink: "/images/comit2-image.jpg",
-    },
-];
 
 const CE_Swiper = () => {
     return (
@@ -37,15 +25,15 @@ const CE_Swiper = () => {
             }}
             modules={[EffectFade, Autoplay]}
         >
-            {LIST_IMAGE?.map((item, index) => (
+            {WITH_CLIENT_IMAGE?.map((item, index) => (
                 <SwiperSlide key={index}>
                     <article
-                        className="h-96 w-full overflow-hidden"
+                        className="h-[500px] w-full overflow-hidden"
                         style={{
-                            backgroundImage: `url(${item.imgelink})`,
+                            backgroundImage: `url(${item.img})`,
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover",
-                            backgroundPosition: "0px 40%",
+                            backgroundPosition: "0px 25%",
                             backgroundPositionX: "center",
                             backgroundPositionY: "center",
                             borderRadius: 10,

@@ -13,33 +13,93 @@ const OurClient = () => {
     const PARTNER_LIST: PartnerType[] = [
         {
             id: 0,
-            name: "Partner 1",
-            image: "/images/c1.png",
+            name: "logo hotel mulia",
+            image: "/images/client1.png",
             link: "/",
         },
         {
             id: 1,
-            name: "Partner 2",
-            image: "/images/c2.png",
+            name: "logo gran melia",
+            image: "/images/client2.jpg",
             link: "/",
         },
         {
             id: 2,
-            name: "Partner 2",
-            image: "/images/c3.png",
+            name: "logo rumah perubahan",
+            image: "/images/client3.png",
             link: "/",
         },
         {
             id: 3,
-            name: "Partner 3",
-            image: "/images/c4.png",
+            name: "logo ionic office tower",
+            image: "/images/client4.jpeg",
+            link: "/",
+        },
+        {
+            id: 4,
+            name: "logo grand dukuh indah",
+            image: "/images/client5.png",
+            link: "/",
+        },
+        {
+            id: 5,
+            name: "logo swallow",
+            image: "/images/client6.jpg",
+            link: "/",
+        },
+        {
+            id: 6,
+            name: "logo gaga",
+            image: "/images/client7.jpeg",
+            link: "/",
+        },
+        {
+            id: 7,
+            name: "logo indomaret",
+            image: "/images/client8.png",
+            link: "/",
+        },
+        {
+            id: 8,
+            name: "logo apartement gading reiver view",
+            image: "/images/client9.png",
+            link: "/",
+        },
+        {
+            id: 9,
+            name: "logo glamping kancana mandira",
+            image: "/images/client10.jpeg",
+            link: "/",
+        },
+        {
+            id: 10,
+            name: "logo mitsubishi",
+            image: "/images/client11.jpg",
+            link: "/",
+        },
+        {
+            id: 11,
+            name: "logo ipb",
+            image: "/images/client12.png",
+            link: "/",
+        },
+        {
+            id: 12,
+            name: "logo mall of indonesia",
+            image: "/images/client13.png",
+            link: "/",
+        },
+        {
+            id: 13,
+            name: "logo wisma kds",
+            image: "/images/client14.png",
             link: "/",
         },
     ];
     return (
         <section className="flex space-x-16 w-full 2xl:w-10/12 overflow-hidden">
             <Marquee pauseOnHover>
-                <div className="flex grayscale ">
+                <div className="flex  ">
                     {PARTNER_LIST.map((partner) => (
                         <Image
                             key={partner.id}
